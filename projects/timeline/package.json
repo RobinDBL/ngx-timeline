@@ -1,6 +1,6 @@
 {
   "name": "@robindbl/ngx-timeline",
-  "version": "1.0.1",
+  "version": "1.0.3",
   "private": false,
   "peerDependencies": {
     "@angular/common": "^14.2.0",
@@ -11,5 +11,13 @@
   },
   "dependencies": {
     "tslib": "^2.3.0"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/robindbl/ngx-timeline.git"
+  },
+  "license": "MIT",
+  "files": [
+    "assets/"
+  ]
 }
