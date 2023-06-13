@@ -1,0 +1,16 @@
+<section id="timeline">
+    <div class="container py-5">
+      <div class="main-timeline">
+        <div class="timeline {{item.position || 'left'}} {{item.future ? 'future' : ''}}" *ngFor="let item of data">
+          <div class="card">
+            <div class="card-body p-4">
+              <h3 *ngIf="item.title">{{item.title}}</h3>
+              <small class="timeline-date" *ngIf="item.info">{{item.info}}</small>
+              <p class="mb-0" [innerHTML]="item.description" *ngIf="item.description"></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+</section>
+  
