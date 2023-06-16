@@ -1,0 +1,10 @@
+{
+    "$schema": "../../../node_modules/@angular-devkit/schematics/collection-schema.json",
+    "schematics": {
+      "ng-add": {
+        "description": "Install the npx-timeline package and add dependencies",
+        "factory": "./ng-add/index#ngAdd",
+        "schema": "./ng-add/schema.json"
+      }
+    }
+  }

@@ -12,7 +12,7 @@ import { CommonModule } from '@angular/common';
     CommonModule
   ],
   exports: [
-    TimelineComponent
+    TimelineComponent,
   ]
 })
 export class TimelineModule { }

@@ -9,15 +9,20 @@ This is an angular module that creates a timeline component.
 Install the package using:
 
 ```
-ng add @robindbl/ngx-timeline
-```
-
-(preferred)
-
-or
-
-```
 npm install @robindbl/ngx-timeline
+```
+
+Then, add bootstrap to `angular.json`
+
+```
+"styles": [
+              "node_modules/bootstrap/dist/css/bootstrap.min.css",
+            ],
+"scripts": [
+            "node_modules/@popperjs/core/dist/umd/popper.min.js",
+            "node_modules/bootstrap/dist/js/bootstrap.min.js",
+            "node_modules/jquery/dist/jquery.js"
+          ]
 ```
 
 
@@ -53,10 +58,44 @@ There are a few optional arguments:
 
 `rulerColor`: Change the color of the ruler in the middle.
 
+eg.
+
+```
+<ngx-timeline [data]="data" [backgroundColor]="'#d3d3d3'" [dotColor]="'blue'" [futureDotColor]="'rgb(255, 165, 0)'" [rulerColor]="'#111111'"></ngx-timeline>
+
+```
+
+For a complete example, see https://github.com/RobinDBL/ngx-timeline/tree/main/projects/testapplication
+
 ## Data
 
 The required `data` argument is an object. Here are its properties:
 
+```
+public data: TimelineData[] = [
+    {
+      title: 'title1',
+      description: 'description1',
+      info: 'info1',
+      position: 'left',
+      future: false
+    },
+    {
+      title: 'title2',
+      description: 'description2',
+      info: 'info2',
+      position: 'right'
+    },
+    {
+      title: 'title3',
+      description: 'description3',
+      info: 'info3',
+      position: 'left',
+      future: true
+    }
+  ]
+
+```  
 `title`: A string that shows the title of the event
 
 `description`: The description of the event. This supports HTML tags
